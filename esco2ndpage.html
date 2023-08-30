@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<style>
+*{
+  box-sizing:border-box;
+}
+
+   /* displaying the raw in the first container as a flex*/
+   
+  .container .raw{
+    width:100%;
+    display:flex;
+	flex-wrap:no-wrap;
+	border:1px dotted green;
+	background-color:
+  }
+  
+    /*displaying the the second container as a flex*/
+	
+  .container{
+    display:flex;
+	border:1px solid yellow;
+  }
+  .container::after{
+    content:"";
+	clear:both;
+	display:table;
+  }
+  .raw .box{
+    width:33.3%;
+	margin:0.1em;
+	border:none;
+	border:1px solid green;
+  }
+  .raw .box.one{
+    color:#c90e88;
+	font-family:Georgia, serif;
+	font-size:2em;
+  }
+  
+  .raw .box.two{
+    display:flex;
+	flex-wrap:no-wrap;
+  }
+  
+  /*clearfix hack*/
+  .raw .box.two::after{
+    content:"";
+	clear:both;
+	display:table;
+  }
+  
+  .raw .box.two div{
+    margin-left:2em;
+  }
+  
+  /*all the p elements in .box.two*/
+   .box.two p{
+       color:#c90e88;
+	   font-family:Georgia, serif;
+	   font-size:2em;
+   }
+   .box.two p{
+      margin-top:0;
+   }
+   .box.two .one div , .box.two .two div{
+	 margin-left:0;
+	 margin-top:-100%;
+   }
+   
+    .raw .box.three{
+      display:flex;
+	  flex-wrap:no-wrap;
+  }
+  
+  .raw .box.three div.whats{
+    border:1px solid;
+	height:50%;
+	background-color:green;
+	font-size:100%;
+	color:white;
+	margin-left:em;
+	margin-top:4%;
+  }
+  
+  /*clearfix hack*/
+  .raw .box.three::after{
+    content:"";
+	clear:both;
+	display:table;
+  }
+        /*the a elment for call me */
+  .raw .box.three div span a{
+       color:#c90e88;
+	   font-family:Georgia, serif;
+	   font-size:2em;
+	   text-decoration:none;
+  }
+  
+        /*the a elment for call me at hover */
+  .raw .box.three div span a:hover{
+     background-color:yellow;
+	 color:blue;
+  }
+  
+    /*styling column one in the second container*/
+	
+  .container .col.one{
+    width:60%;
+	background-color:;
+	border:1px solid blue;
+  }
+  
+  /*floating the columns in container two horizonterly next to each other*/
+  
+  .container .col{
+    float:left;
+	margin:0.5em;
+  }
+  
+  /*styling column two in the second container*/
+  
+  .container .col.two{
+      width:40%;
+	  background-color:;
+	  border:1px solid blue;
+	  background-image:radial-gradient(circle , rgba(250, 251, 252,0.8), rgba(93, 99, 92,0.2));
+  }
+  
+  .container .col .raw{
+    display:flex;
+	flex-wrap:no-wrap;
+  }
+      /*clear fix hack after the float*/
+	  
+  .container .col .raw::after{
+    content:"";
+	clear:both;
+	display:table;
+  }
+  
+  .container .col .raw .box{
+     width:49%;
+	 margin:1%;
+  }
+  
+   .container .col .raw .box img{
+     width:100%;
+   }
+           /*displaying the contents in the second column in the center*/
+   .col.one .raw.two{
+     display:flex;
+	 justify-content:center;
+	 align-items:center;
+   }
+   
+   /*styling the box in the .raw.two in the column one*/
+   
+      .col.one .raw.two .box{
+	     width:80%;
+	  }
+	  
+	  .col.one .raw.two .box .describe{
+	     color:;
+	     font-family:Georgia, serif;
+	     font-size:1.1em;
+	  }
+	  
+	  .col.one .raw.two .box .describe h2{
+	    color:#c90e88;
+	  }
+	  
+	  .col.one .raw.two .box .describe span{
+	    color:#c90e88;
+	  }
+	  
+	  .col.one .raw.two .box .describe div a{
+	    color:#c90e88;
+		border-radius:2em;
+		text-decoration:none;
+	  }
+	  
+	  .col.one .raw.two .box .describe div a:hover{
+	    color:blue;
+	  }
+	  
+  
+  @media(max-width:600px){
+    .raw{
+	  flex-wrap:wrap;
+	}
+	.raw .box{
+	 width:100%;
+	}
+	    /*the box in the raw in the column of the second container*/
+	.container .col .raw .box{
+	   width:100%;
+	}
+	
+	
+	.raw .box.one{
+	  text-align:center;
+	}
+	.raw .box.two{
+	    display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+  }
+</style>
+</head>
+<body>
+
+         <!--first container---->
+		 
+<div class="container">
+  <div class="raw">
+  
+    <div class="box one">
+	  CINOTRUCK
+	</div>
+	
+	<div class="box two">
+	  <div class="one">
+	     <p>64</p>
+	     <div class="one1">TONS</div>
+	  </div>
+	  
+	  <div class="two">
+	      <p>24</p>
+	      <div class="two2">years</div>
+	  </div>
+	  
+	</div>
+	
+	<div class="box three">
+	  <div class="num">call me:<br/><span><a href="https://wa.me/2567?text=chat">0703446623</a></span></div>
+	  <div class="whats">whatsapp</div>
+	</div>
+  </div>
+</div>
+
+<!--second container---->
+ 
+<div class="container">
+
+  <div class="col one"> <!----column one-->
+  
+    <div class="raw one">  <!--raw one--->
+	
+	  <div class="box">
+	    <img src="elf1.jpg">
+	  </div>
+	   <div class="box">
+	    <img src="elf1.jpg">
+	  </div>
+	  
+	</div>
+	
+	 <div class="raw two"><!--raw two--->
+	  
+	   <div class="box">
+	     <div class="describe">
+		   <h2>ABOUT ME:</h2>
+		   <h3>25 year old Female from:<span>Kansanga, Kampala</span>
+		   <p>Look no further. Coz your perfect match just 
+		   arrived. Am a swahili moslemish happy soul
+		   from Zanzibar.... Am reachable for pleasure,
+		   Hit me up, Get self renewal coz you deserve it.
+		   Wapenzi Wangu Wa Kampala Njoo Ni Wape Penzi Moto
+		   Moto..... KARIBUNI.</p>
+		   <div class="call2"><a href="tel:+256-703-446-623">CALL ME</a></div>
+	     </div>
+	   </div>
+	  
+	</div>
+	
+  </div>
+  
+  <div class="col two"> <!--clunm two--->
+    ADVERTISE HERE IN THIS COLUMN DOWN WARDS
+  </div>
+  
+</div>
+</body>
+</html>

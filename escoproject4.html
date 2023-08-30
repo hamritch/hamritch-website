@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<style>
+body{
+ background-color:;
+}
+  *{
+    box-sizing:border-box;
+}
+
+  /*styling the header*/
+  
+.header{
+  border:px solid green;
+  display:flex;
+  flex-wrap:no-wrap;
+  position:relative;
+}
+
+  /*clear fix hack*/
+  
+.header::after{
+  content:"";
+  clear:both;
+  display:table;
+}
+
+.header .box{
+  width:33.3%;
+  border:1px solid red;
+  margin:0.1em;
+}
+
+.header .box.one{
+  width:33.3%;
+}
+
+.header.box.two{
+  widht:20%;
+}
+
+.header .box.three{
+  width:33.3%;
+}
+
+.header .box.two{
+  width:20em;
+  overflow:hidden;
+}
+
+.header .box.two .slides{
+  width:120em; /*six times the width of its contaner (10em * 6)*/
+  display:flex;
+  flex-wrap:no-wrap;
+  position:relative;
+  animation:advert 20s 1s linear alternate infinite;
+}
+@keyframes advert{
+  from{
+    right:0;
+  }
+  to{
+    right:120em;
+  }
+}
+
+.header .box.two .slides .image{
+  border:1px solid green;
+  width:60em;
+  
+}
+
+.header .box.two .slides .image img{
+  width:100%;
+}
+
+.container{
+  border:none;
+  margin:0.3em;
+  cursor:pointer;
+}
+
+.container .raw{
+  display:flex;
+  flex-wrap:no-wrap;
+}
+
+/*clear fix hack after the float*/
+
+.container .raw::after{
+  content:"";
+  clear:both;
+  display:table;
+}
+
+.raw .box{
+  border:1px solid #daff12;
+  margin:0.1em;
+  width:24%;
+  margin-bottom:1em;
+}
+.container .raw .box .items{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:#ef67ea;
+  margin:0.4em;
+  color:white;
+}
+.container .raw .box .tiperimage{
+  width:100%;
+  position:relative;
+}
+
+/*making the img to have the same width as its container*/
+
+.tiperimage img{
+  width:100%;
+}
+  /* the a element in tiper image div */
+.tiperimage a{
+  text-decoration:none;
+  color:white;
+}
+       
+	   /*this aligns the price in the center of the box*/
+.box .price{  
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   color:blue;
+   margin:0.4em;
+   border:1px dotted #34fda9;
+   background-color:#0ec91b;
+   color:white;
+}
+
+.box .price a{
+  color:white;
+  text-decoration:none;
+}
+	   /*this aligns the phone in the center of the box*/
+.box .phone{  
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   margin:0.4em;
+   border:1px dotted #34fda9;
+   background-color:;
+   color:green;
+}
+
+.whatsapp{
+  background-color:green;
+  width:45%;
+  text-align:center;
+}
+
+.whatsapp a{
+  color:white;
+  text-decoration:none;
+}
+
+
+.box .phone a{
+   color:green;
+   text-decoration:none;
+}
+
+      /*this styles the tipper name on the tiper image*/
+.tipername{      
+  border:2px dotted green;
+  background-color:#e61045;
+  width:25%;
+  text-align:center;
+  position:absolute;
+  top:1.4em;
+  left:-3;
+  transform:rotateZ(-60deg);
+  z-index:1; /*placing it on top */
+}
+
+/*this styles the details on the image*/
+.tiperimage .details{
+  position:absolute;
+  text-align:center;
+  top:20%;
+  width:100%;
+  background-color:rgba(247, 252, 249,0.6);
+}
+
+   /*styling the details div in box two in the first container*/
+   
+.container.one .box.two .tiperimage .details{
+  position:absolute;
+  top:0;
+  text-align:;
+  width:100%;
+  height:100%;
+  background-color:#68826f;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+  /*styling the call admin div which is displayed on hover over the above div*/
+.container.one .box.two .tiperimage .details .calladmin{
+   border:1px solid green;
+   width:70%;
+   position:absolute;
+   top:50%;
+   left:20%;
+   background-color:#78edfa;
+   display:none;
+}
+
+  /*displaying the call admin div on hover over the above div*/
+  
+.container.one .box.two .tiperimage .details:hover .calladmin{
+  display:block;
+  background-color:#1042e6;
+}
+
+.tiperimage .details .midle{
+  display:block;
+  font-family:Georgia, serif;
+  font-size:1.5em;
+}
+
+/*media query for scalable devices*/
+
+    @media(max-width:700px){
+  .container .raw{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .container .raw .box{
+    width:47%;
+  }
+  .header{
+    flex-wrap:wrap;
+  }
+  .header .box.one{
+    width:100%;
+  }
+  .header .box.two{
+    width:100%;
+  }
+  .header .box.two .slides{
+    width:600%;
+  }
+  .header .box.three{
+    width:100%;
+  }
+} 
+
+</style>
+</head>
+<body>
+<div class="header">
+
+  <div class="box one">
+    <div class="name">SECRETSUG</div>
+  </div>
+  
+  <div class="box two">
+  
+    <div class="slides">
+	
+	  <div class="image 1"><img src="elf1.jpg"></div>
+	  <div class="image 2"><img src="elf1.jpg"></div>
+	  <div class="image 3"><img src="elf1.jpg"></div>
+	  <div class="image 1"><img src="elf1.jpg"></div>
+	  <div class="image 2"><img src="elf1.jpg"></div>
+	  <div class="image 3"><img src="elf1.jpg"></div>
+	  
+	</div>
+	
+  </div>
+  
+  <div class="box three">
+    <div class="name">SECRETSUG</div>
+  </div>
+  
+</div>
+
+                      <!--container one--->
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+<div class="container one">
+
+  <div class="raw">
+  
+    <div class="box one">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box two">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	 <div class="tiperimage">
+	    <a href="tel:+256-703-446-623"><img src="elf1.jpg">
+		
+		<div class="details">
+		
+		  <div class="midle">
+		     <div>make money</div>
+		     <div>as an escort</div>
+		     <div>advertise your self here</div>
+		  </div>
+		  
+		  <div class="calladmin">CALL ADMIN</div>
+		  
+        </div>
+		
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call admin</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box three">
+	
+	  <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	  
+	</div>
+	
+	<div class="box four">
+	
+	   <div class="items">
+	    SECRETSUG
+	  </div>
+	  
+	  <div class="tiperimage">
+	    <a href="esco2ndpage.html"><img src="elf1.jpg">
+		<div class="tipername">VIP</div>
+		<div class="details">
+		  <div class="midle">
+		     <div>Noreen.</div>
+		     <div>Ntinda</div>
+		     <div>kampala</div>
+		  </div>
+        </div>
+	  </a></div><!--closing the tiperimage div--->
+	  
+	  <div class="whatsapp"><a href="https://wa.me/256703446623?text=chat">whatsapp</a></div> <!--this initiates a whatsapp chat-->
+	  <div class="phone">
+	    <a href="tel:+256-703-446-623">0703446623</a><!--this initaites a phone call--->
+	  </div>
+	  
+	  <div class="price">
+	     <a href="tel:+256-703-446-623">call Noreen</a>
+	  </div>
+	  
+	
+  </div>
+  
+</div>
+
+ 
+</body>
+</html>

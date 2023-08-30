@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    *{
+	  box-sizing:border-box;
+	}
+	
+	body{
+	 
+	}
+	
+	.container{
+	 display:flex;
+	 flex-wrap:no-wrap;
+	 justify-content:center;
+	 align-items:center;
+	 border:1px solid green;
+	}
+	
+	
+	.container::after{
+	  content:"";
+	  clear:both;
+	  display:table;
+	}
+	
+	.container .box{
+	  width:20%;
+	  ;
+	  margin:9px;
+	  border:1px solid red;
+	  background-position:;
+	  background-repeat:no-repeat;
+	  background-size:cover;
+	  
+	}
+	
+	.container .box img{
+	      width:100%;
+		  height:100%;
+		  border:4px solid #bbb;  /*this creates a thumb nail image*/
+	}
+	
+	/*this is the div that covers the unwanted words*/
+	
+	.name{
+	  display:flex;
+      justify-content:center;
+      align-items:center;
+      background-color:#ef67ea;
+      margin:0.4em;
+      color:white;
+	}
+	
+	
+	@media(max-width:700px){
+	  .container{
+	    display:flex;
+		flex-wrap:wrap;
+	  }
+	  .container .box{
+	    width:47%;
+	  }
+	}
+	
+	
+	@media(max-width:500px){
+	  .container{
+	    display:flex;
+		flex-wrap:wrap;
+	  }
+	  .container .box{
+	    width:100%;
+	  }
+	}
+	
+  </style>
+</head>
+<body>
+<!--first container---->
+  <div class="container">
+  
+    <div class="box">
+	  <div class="name">name</div>
+	  <div class="image">
+	  <img src="yellowsand.jpg">
+	  </div>
+	</div>
+	
+	<div class="box">
+	  <img src="k.png">
+	</div>
+	
+	<div class="box">
+	<img src=".png">
+	</div>
+	
+	<div class="box">
+	<img src="v.png">
+	</div>
+	
+  </div>
+  
+  <!--another container--->
+   
+    <div class="container">
+  
+    <div class="box">
+	  <img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	  <img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	<img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	<img src="es.jpg">
+	</div>
+	
+  </div>
+  
+  <!--another container----->
+   
+    <div class="container">
+  
+    <div class="box">
+	  <img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	  <img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	<img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	<img src="es.jpg">
+	</div>
+	
+  </div>
+  
+  <!--another container----->
+   
+    <div class="container">
+  
+    <div class="box">
+	  <img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	  <img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	<img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	<img src="eo.jpg">
+	</div>
+	
+  </div>
+  
+   <!--another container----->
+   
+    <div class="container">
+  
+    <div class="box">
+	  <img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	  <img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	<img src="es.jpg">
+	</div>
+	
+	<div class="box">
+	<img src="es.jpg">
+	</div>
+	
+  </div>
+  
+</body>
+</html>
